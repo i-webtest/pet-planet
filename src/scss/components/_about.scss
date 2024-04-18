@@ -1,7 +1,20 @@
 @use '../variables' as *;
+@use '../media' as *;
 
 .about {
-  padding: 120px 0 163px;
+  padding: 120px 0 278px;
+
+  @include laptop {
+    padding: 100px 0 255px;
+  }
+
+  @include tablet {
+    padding: 100px 0 181px;
+  }
+
+  @include mobile {
+    padding: 80px 0 122px;
+  }
 
   &__title {
     font-weight: 700;
@@ -9,6 +22,15 @@
     line-height: 1.3;
     text-align: center;
     margin-bottom: 32px;
+
+    @include laptop {
+      font-size: 44px;
+    }
+
+    @include mobile {
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
   }
 
   &__box {
@@ -16,6 +38,10 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+
+    @include tablet {
+      flex-direction: column;
+    }
 
     &::before {
       content: '';
@@ -26,14 +52,41 @@
       background-image: url('/img/cat.png');
       background-size: contain;
       background-repeat: no-repeat;
+      background-position: center;
+
+      @include laptop {
+        height: 319px;
+        transform: translateY(-14px);
+      }
+
+      @include tablet {
+        flex-basis: 319px;
+        width: 408px;
+        max-width: 100%;
+        height: auto;
+        transform: translateY(-14px);
+      }
+
+      @include mobile {
+        flex-basis: 199px;
+        width: 256px;
+        height: 199px;
+      }
     }
   }
 
   &__content {
     flex-basis: 50%;
+    padding: 10px 24px;
+
+    @include tablet {
+      width: 100%;
+      padding: 10px 0;
+    }
   }
 
   &__text {
+    // max-width: 592px;
     margin-bottom: 16px;
 
     &:last-child {
