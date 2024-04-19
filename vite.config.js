@@ -2,6 +2,7 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  // base: '/pet-planet/',
   root: './src',
   publicDir: '../public',
   build: {
