@@ -5,24 +5,32 @@
   color: $light;
   background-color: $purple;
   background-image: url('/img/bg-dog.png'), url('/img/pattern.svg');
-  background-size: contain, cover;
+  background-size: contain, auto;
   background-position: right bottom, center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat, repeat;
   padding: 218px 0 245px;
+
+  @include bigscreen {
+    background-image: url('/img/bg-dog-bigscreen.png'), url('/img/pattern.svg');
+    background-position: left 48vw bottom 0, center;
+    background-size: 1850px, auto;
+  }
 
   @include laptop {
     background-image: url('/img/bg-dog-laptop.png'), url('/img/pattern-laptop.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, cover;
     padding: 148px 0 172px;
   }
 
   @include tablet {
-    background-image: url('/img/bg-dog-tablet.png'), url('/img/pattern-tablet.svg');
+    background-image: url('/img/bg-dog-tablet.png'), url('/img/pattern.svg');
     background-size: 655px 564px, cover;
     padding: 108px 0 461px;
   }
 
   @include mobile {
-    background-image: url('/img/bg-dog-mobile.png'), url('/img/pattern-mobile.svg');
+    background-image: url('/img/bg-dog-mobile.png'), url('/img/pattern.svg');
     background-size: 294px 256px, cover;
     padding: 100px 0 284px;
   }
@@ -49,8 +57,16 @@
   &__text {
     max-width: 420px;
 
+    @include bigscreen {
+      max-width: 500px;
+    }
+
     @include laptop {
       max-width: 360px;
+    }
+
+    @include mobile {
+      max-width: 300px;
     }
   }
 }

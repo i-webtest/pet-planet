@@ -31,9 +31,6 @@
       margin-bottom: 32px;
     }
 
-    @include tablet {
-    }
-
     @include mobile {
       font-size: 30px;
     }
@@ -45,10 +42,6 @@
     width: 100%;
     border: none;
     padding: 0;
-
-    @include tablet {
-      max-width: 676px;
-    }
   }
 
   &__input {
@@ -58,7 +51,11 @@
     background-color: $light;
     border: 2px solid $purple;
     border-radius: 40px;
-    padding: 16px 32px;
+    padding: 14px 30px;
+
+    &:is(:hover, :focus-visible) {
+      border-color: $carrot;
+    }
 
     &::placeholder {
       font-weight: 400;
@@ -75,24 +72,25 @@
     right: 0;
     bottom: 0;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 4px;
+    min-width: 209px;
     font-weight: 700;
     line-height: 1.4;
     color: $light;
     background-color: $purple;
     border: 1px solid transparent;
     border-radius: 40px;
+    outline: none;
     padding: 16px 31px;
 
-    @include laptop {
-      padding: 16px 41px;
-    }
-
-    @include tablet {
+    &:focus-visible {
+      border-color: $carrot;
     }
 
     @include mobile {
+      min-width: 54px;
       padding: 19px;
     }
 
@@ -107,7 +105,8 @@
 
   &__button-text {
     @include mobile {
-      display: none;
+      position: fixed;
+      transform: scale(0);
     }
   }
 }

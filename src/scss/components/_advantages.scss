@@ -14,6 +14,14 @@
     width: 396px;
     height: 682px;
     background-image: url('/img/dog.png');
+    background-image: image-set(
+      url('/img/dog.avif') type('image/avif') 1x,
+      url('/img/dog@2x.avif') type('image/avif') 2x,
+      url('/img/dog.webp') type('image/webp') 1x,
+      url('/img/dog@2x.webp') type('image/webp') 2x,
+      url('/img/dog.png') type('image/png') 1x,
+      url('/img/dog@2x.png') type('image/png') 2x
+    );
     background-size: contain;
 
     @include laptop {
@@ -122,14 +130,38 @@
 
   &__item_assortment {
     background-image: url('/img/assortment.png');
+    background-image: image-set(
+      url('/img/assortment.avif') type('image/avif') 1x,
+      url('/img/assortment@2x.avif') type('image/avif') 2x,
+      url('/img/assortment.webp') type('image/webp') 1x,
+      url('/img/assortment@2x.webp') type('image/webp') 2x,
+      url('/img/assortment.png') type('image/png') 1x,
+      url('/img/assortment@2x.png') type('image/png') 2x
+    );
   }
 
   &__item_quality {
     background-image: url('/img/quality.png');
+    background-image: image-set(
+      url('/img/quality.avif') type('image/avif') 1x,
+      url('/img/quality@2x.avif') type('image/avif') 2x,
+      url('/img/quality.webp') type('image/webp') 1x,
+      url('/img/quality@2x.webp') type('image/webp') 2x,
+      url('/img/quality.png') type('image/png') 1x,
+      url('/img/quality@2x.png') type('image/png') 2x
+    );
   }
 
   &__item_personal {
     background-image: url('/img/personal.png');
+    background-image: image-set(
+      url('/img/personal.avif') type('image/avif') 1x,
+      url('/img/personal@2x.avif') type('image/avif') 2x,
+      url('/img/personal.webp') type('image/webp') 1x,
+      url('/img/personal@2x.webp') type('image/webp') 2x,
+      url('/img/personal.png') type('image/png') 1x,
+      url('/img/personal@2x.png') type('image/png') 2x
+    );
   }
 
   &__subtitle {
