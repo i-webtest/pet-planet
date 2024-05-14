@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   // base: '/pet-planet/',
-  base: '/pet-planet/dist/',
+  // base: '/pet-planet/dist/',
   // base: '/dist/',
   root: './src',
   publicDir: '../public',
