@@ -44,15 +44,47 @@
   }
 
   &__cart-button {
+    position: relative;
+    display: block;
+    width: 28px;
+    height: 28px;
+  }
+
+  &__cart-count {
+    position: relative;
+    z-index: 2;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1;
+    color: $light;
+  }
+
+  &__cart-icon {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
   }
 
   &__title {
+    font-weight: 700;
+    font-size: 52px;
+    margin-bottom: 32px;
   }
 
   &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 420px);
+    justify-content: center;
+    gap: 20px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
   }
 
   &__item {
+    display: flex;
   }
 
   &__product {
