@@ -5,7 +5,7 @@ import { resolve } from 'path';
 export default defineConfig({
   // base: '/pet-planet/',
   // base: '/pet-planet/dist/',
-  // base: '/dist/',
+  base: '/dist/',
   root: './src',
   publicDir: '../public',
   build: {
