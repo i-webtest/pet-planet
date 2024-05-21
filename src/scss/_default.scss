@@ -97,3 +97,20 @@ iframe {
     padding: 0 14px;
   }
 }
+
+.modal-overlay {
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  display: none;
+  background-color: rgba(black, 0.7);
+  overflow-y: auto;
+
+  &_close-button {
+    position: fixed;
+    color: $white;
+    top: 12px;
+    right: 12px;
+    font-size: 36px;
+  }
+}

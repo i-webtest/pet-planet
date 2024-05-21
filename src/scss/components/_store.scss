@@ -53,6 +53,7 @@
   &__cart-count {
     position: relative;
     z-index: 2;
+    bottom: 3px;
     font-weight: 700;
     font-size: 12px;
     line-height: 1;
@@ -61,8 +62,8 @@
 
   &__cart-icon {
     position: absolute;
-    inset: 0;
     z-index: 1;
+    inset: 0;
   }
 
   &__title {
