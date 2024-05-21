@@ -1,5 +1,6 @@
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { defineConfig } from 'vite';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import { resolve } from 'path';
 
 export default defineConfig({
   // base: '/pet-planet/',
@@ -9,6 +10,12 @@ export default defineConfig({
   publicDir: '../public',
   build: {
     outDir: '../dist',
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, './src/index.html'),
+        store: resolve(__dirname, './src/store.html'),
+      },
+    },
   },
   plugins: [
     ViteImageOptimizer({
