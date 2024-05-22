@@ -9,11 +9,23 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+
+    @include mobile {
+      flex-wrap: wrap;
+      justify-content: end;
+      gap: 30px;
+    }
   }
 
   &__categories {
     display: flex;
     gap: 28px;
+    overflow-x: auto;
+
+    @include mobile {
+      flex-grow: 1;
+      gap: 16px;
+    }
   }
 
   &__category-button {
@@ -53,11 +65,18 @@
   &__cart-count {
     position: relative;
     z-index: 2;
-    bottom: 3px;
     font-weight: 700;
     font-size: 12px;
     line-height: 1;
     color: $light;
+
+    @include bigscreen {
+      bottom: 3px;
+    }
+
+    @include laptop {
+      top: 2px;
+    }
   }
 
   &__cart-icon {
